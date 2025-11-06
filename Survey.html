@@ -1,0 +1,282 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2575.7">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+  </style>
+</head>
+<body>
+<p class="p1">&lt;script src="https://cdn.tailwindcss.com"&gt;&lt;/script&gt;</p>
+<p class="p1">&lt;style&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.act-card{transition:all .2s;cursor:pointer;border-radius:8px}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.full{background-color:#fca5a5;cursor:not-allowed;opacity:.7}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.sel:checked+.act-card{border-color:#4f46e5;background-color:#eef2ff;box-shadow:0 0 0 2px #4f46e5}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.max-w-4xl{max-width:100%}</p>
+<p class="p1">&lt;/style&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;div id="A" class="max-w-4xl mx-auto bg-white shadow-xl rounded-xl p-4"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;header class="text-center mb-6"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h1 class="text-2xl font-bold text-indigo-700"&gt;Student Activity Sign-Up&lt;/h1&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p class="text-gray-600 mt-1 text-sm"&gt;Select teacher, enter name, and choose two activities (unless Activity 1 is Swimming).&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/header&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div id="L" class="text-center p-4 text-indigo-500 font-semibold"&gt;&lt;svg class="animate-spin h-5 w-5 mr-3 inline-block" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"&gt;&lt;circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"&gt;&lt;/circle&gt;&lt;path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"&gt;&lt;/path&gt;&lt;/svg&gt;Loading data...&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div id="M" class="hidden p-3 mb-4 rounded-lg font-medium"&gt;&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;form id="F" class="space-y-6"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="grid grid-cols-1 md:grid-cols-2 gap-4"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;input type="text" id="N1" placeholder="First Name" required class="p-3 border rounded-lg focus:ring-indigo-500 focus:border-indigo-500"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;input type="text" id="N2" placeholder="Last Name" required class="p-3 border rounded-lg focus:ring-indigo-500 focus:border-indigo-500"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="mb-6 bg-yellow-50 p-3 rounded-lg border border-yellow-200"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;h3 class="text-xl font-semibold text-gray-800 mb-3"&gt;1. Social Studies Teacher:&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div id="T_Select" class="grid grid-cols-2 gap-4"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;label class="block"&gt;&lt;input type="radio" name="teacher" value="Bauman" class="hidden sel"&gt;&lt;div class="act-card border-2 p-3 shadow-sm text-center bg-white hover:border-indigo-400 border-gray-300"&gt;&lt;div class="font-bold text-gray-800"&gt;Bauman&lt;/div&gt;&lt;/div&gt;&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;label class="block"&gt;&lt;input type="radio" name="teacher" value="Pfeifer" class="hidden sel"&gt;&lt;div class="act-card border-2 p-3 shadow-sm text-center bg-white hover:border-indigo-400 border-gray-300"&gt;&lt;div class="font-bold text-gray-800"&gt;Pfeifer&lt;/div&gt;&lt;/div&gt;&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div id="E" class="bg-indigo-50 p-3 rounded-lg border border-indigo-200"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;h2 class="text-base font-semibold text-indigo-700 mb-2"&gt;Current Capacity (Standard: 35/Teacher; Swimming: 30/Shared)&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div id="C" class="grid grid-cols-2 gap-2 text-xs"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;section&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;h3 class="text-xl font-semibold text-gray-800 mb-3"&gt;2. Activity 1:&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div id="P1" class="grid md:grid-cols-4 gap-4"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;section id="S2"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;h3 class="text-xl font-semibold text-gray-800 mb-3"&gt;3. Activity 2:&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;p id="W" class="text-sm font-medium text-red-600 mb-2 hidden"&gt;Activity 1 is Swimming, Activity 2 is disabled.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div id="P2" class="grid md:grid-cols-3 gap-4"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="pt-4 border-t border-gray-200"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;button type="submit" id="S" class="w-full py-3 bg-indigo-600 text-white font-bold rounded-lg disabled:bg-indigo-300" disabled&gt;Select Activities&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/form&gt;</p>
+<p class="p1">&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;!-- V8 FIREBASE COMPAT LIBRARY IMPORTS --&gt;</p>
+<p class="p1">&lt;script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"&gt;&lt;/script&gt;</p>
+<p class="p1">&lt;script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"&gt;&lt;/script&gt;</p>
+<p class="p1">&lt;script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"&gt;&lt;/script&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;script&gt;</p>
+<p class="p1">(function() {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const K=35, SWIM_K=30, T_NAMES=['Bauman', 'Pfeifer']; // Standard limit 35 (per teacher), Swimming limit 30 (shared)</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const A1=['Swimming','Board Games','Video Games','Gym'],A2=['Board Games','Video Games','Gym'];</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const D=typeof __app_id!=='undefined'?__app_id:'a';</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const L=document.getElementById('L'),M=document.getElementById('M'),S=document.getElementById('S'),F=document.getElementById('F'),P1=document.getElementById('P1'),P2=document.getElementById('P2'),N1=document.getElementById('N1'),N2=document.getElementById('N2'),C=document.getElementById('C'),W=document.getElementById('W');</p>
+<p class="p1"><span class="Apple-converted-space">    </span>let db,auth,uId=null,cS={n1:'',n2:'',teacher:null,a1:null,a2:null},cE={},iS={teacher:null,a1:null,a2:null},iR=false;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>function msg(t,e){M.textContent=e;M.className='p-3 mb-4 rounded-lg font-medium';M.classList.remove('hidden','bg-red-100','text-red-700','bg-green-100','text-green-700');M.classList.add(t!=='e'?'bg-green-100 text-green-700':'bg-red-100 text-red-700');}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>function Cnt(s){</p>
+<p class="p1"><span class="Apple-converted-space">        </span>cE = {};</p>
+<p class="p1"><span class="Apple-converted-space">        </span>// 1. Initialize teacher-specific counts (K=35)</p>
+<p class="p1"><span class="Apple-converted-space">        </span>T_NAMES.forEach(t =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>A1.filter(a =&gt; a !== 'Swimming').forEach(a =&gt; { cE[`${a}_1_${t}`] = 0; });</p>
+<p class="p1"><span class="Apple-converted-space">            </span>A2.forEach(a =&gt; { cE[`${a}_2_${t}`] = 0; });</p>
+<p class="p1"><span class="Apple-converted-space">        </span>});</p>
+<p class="p1"><span class="Apple-converted-space">        </span>// 2. Initialize shared swimming count (SWIM_K=30)</p>
+<p class="p1"><span class="Apple-converted-space">        </span>cE['Swimming_1_Total'] = 0;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>for(const[id,sel]of Object.entries(s)){</p>
+<p class="p1"><span class="Apple-converted-space">            </span>if(!sel.teacher) continue;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const t = sel.teacher;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>if(sel.activity1){</p>
+<p class="p1"><span class="Apple-converted-space">                </span>if(sel.activity1==='Swimming'){</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>cE['Swimming_1_Total']++; // Shared Pool</p>
+<p class="p1"><span class="Apple-converted-space">                </span>}else{</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>cE[`${sel.activity1}_1_${t}`] = (cE[`${sel.activity1}_1_${t}`] || 0) + 1; // Teacher Pool</p>
+<p class="p1"><span class="Apple-converted-space">                </span>}</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}</p>
+<p class="p1"><span class="Apple-converted-space">            </span>if(sel.activity2 &amp;&amp; sel.activity1!=='Swimming'){</p>
+<p class="p1"><span class="Apple-converted-space">                </span>cE[`${sel.activity2}_2_${t}`] = (cE[`${sel.activity2}_2_${t}`] || 0) + 1; // Teacher Pool</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>R();</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>function Rnd(p,o,aL){</p>
+<p class="p1"><span class="Apple-converted-space">        </span>o.innerHTML='';</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const selectedTeacher = cS.teacher;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>aL.forEach(act=&gt;{</p>
+<p class="p1"><span class="Apple-converted-space">            </span>let cnt=0, limit, full=false, desc;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const isShared = act === 'Swimming';</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>if(isShared){</p>
+<p class="p1"><span class="Apple-converted-space">                </span>limit=SWIM_K;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>cnt=cE['Swimming_1_Total']||0;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>full=cnt&gt;=limit;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>} else if(selectedTeacher){</p>
+<p class="p1"><span class="Apple-converted-space">                </span>limit=K;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>const k=`${act}_${p}_${selectedTeacher}`;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>cnt=cE[k]||0;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>full=cnt&gt;=limit;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>} else {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>limit=K;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>cnt=0;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>const rem=limit-cnt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const ch=cS[`a${p}`]===act;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const dis=(full || (!isShared &amp;&amp; !selectedTeacher &amp;&amp; p &gt; 0))?'disabled':'';</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const cl=full?'full':'bg-white hover:border-indigo-400 border-gray-300';</p>
+<p class="p2"><span class="Apple-converted-space">            </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>if(!selectedTeacher &amp;&amp; !isShared) {</p>
+<p class="p1"><span class="Apple-converted-space">                 </span>desc = 'Select Teacher First';</p>
+<p class="p1"><span class="Apple-converted-space">            </span>} else {</p>
+<p class="p1"><span class="Apple-converted-space">                 </span>desc = full?'FULL':`Avail: ${Math.max(0,rem)}`;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>o.innerHTML+=`&lt;label class="block"&gt;&lt;input type="radio" name="activity${p}" value="${act}" class="hidden sel" ${ch?'checked':''} ${dis}&gt;&lt;div class="act-card border-2 p-3 shadow-sm text-center ${cl}"&gt;&lt;div class="font-bold text-gray-800"&gt;${act}&lt;/div&gt;&lt;p class="text-xs ${full?'text-red-800':'text-indigo-600'} mt-1 font-semibold"&gt;${desc}&lt;/p&gt;&lt;/div&gt;&lt;/label&gt;`;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>});</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>function Cap(){</p>
+<p class="p1"><span class="Apple-converted-space">        </span>C.innerHTML='';</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const allStats=[];</p>
+<p class="p1"><span class="Apple-converted-space">        </span>// Shared Swimming</p>
+<p class="p1"><span class="Apple-converted-space">        </span>allStats.push(['Swimming (A1)', 'Shared', cE['Swimming_1_Total']||0, SWIM_K]);</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>// Teacher Specific</p>
+<p class="p1"><span class="Apple-converted-space">        </span>T_NAMES.forEach(t =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>A1.filter(a =&gt; a !== 'Swimming').forEach(a =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>allStats.push([a+' (A1)', t, cE[`${a}_1_${t}`]||0, K]);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>});</p>
+<p class="p1"><span class="Apple-converted-space">            </span>A2.forEach(a =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>allStats.push([a+' (A2)', t, cE[`${a}_2_${t}`]||0, K]);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>});</p>
+<p class="p1"><span class="Apple-converted-space">        </span>});</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>allStats.sort((a,b)=&gt;a[1].localeCompare(b[1]) || a[0].localeCompare(b[0])).forEach(([act, t, cnt, limit])=&gt;{</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const curr=(cS.a1===act.split(' ')[0] &amp;&amp; act.endsWith('(A1)') &amp;&amp; (t==='Shared' || t===cS.teacher)) ||<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">                       </span>(cS.a2===act.split(' ')[0] &amp;&amp; act.endsWith('(A2)') &amp;&amp; t===cS.teacher);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>let badge=cnt&gt;=limit?'bg-red-100 text-red-700 font-bold':(cnt&gt;=limit-5?'bg-yellow-100 text-yellow-700':(curr?'bg-indigo-100 text-indigo-700 font-bold':'bg-gray-200 text-gray-800'));</p>
+<p class="p1"><span class="Apple-converted-space">            </span>C.innerHTML+=`&lt;div class="flex justify-between items-center py-1 px-2 rounded-md ${badge}"&gt;&lt;span class="font-medium"&gt;${act} (${t})&lt;/span&gt;&lt;span class="font-bold"&gt;${cnt}/${limit}&lt;/span&gt;&lt;/div&gt;`;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>});</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>function V(){</p>
+<p class="p1"><span class="Apple-converted-space">        </span>let ok=N1.value.trim()&amp;&amp;N2.value.trim()&amp;&amp;cS.teacher&amp;&amp;cS.a1,err='';</p>
+<p class="p1"><span class="Apple-converted-space">        </span>if(!cS.teacher){err='Select teacher first.';}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>else if(!N1.value.trim()||!N2.value.trim()){err='Enter name.';}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>else if(!cS.a1){err='Select Activity 1.';}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>else if(cS.a1!=='Swimming'&amp;&amp;!cS.a2){err='Select Activity 2.';}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>if(ok){</p>
+<p class="p1"><span class="Apple-converted-space">            </span>// Check Activity 1 capacity</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const k1_key = cS.a1 === 'Swimming' ? 'Swimming_1_Total' : `${cS.a1}_1_${cS.teacher}`;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const limit1 = cS.a1 === 'Swimming' ? SWIM_K : K;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>if(cS.a1!==iS.a1 &amp;&amp; (cE[k1_key]||0) &gt;= limit1){ok=false;err=`Activity 1 (${cS.a1}) full.`;}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>// Check Activity 2 capacity (only if not swimming)</p>
+<p class="p1"><span class="Apple-converted-space">            </span>if(ok &amp;&amp; cS.a1!=='Swimming' &amp;&amp; cS.a2){</p>
+<p class="p1"><span class="Apple-converted-space">                </span>const k2_key = `${cS.a2}_2_${cS.teacher}`;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>if(cS.a2!==iS.a2 &amp;&amp; (cE[k2_key]||0) &gt;= K){ok=false;err=`Activity 2 (${cS.a2}) full.`;}</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>S.disabled=!ok;S.textContent=ok?'Submit Selections':err||'Submit Selections';</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>function R(){</p>
+<p class="p1"><span class="Apple-converted-space">        </span>if(!iR){L.classList.remove('hidden');return;}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>L.classList.add('hidden');</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>// Handle teacher radio button persistence</p>
+<p class="p1"><span class="Apple-converted-space">        </span>document.querySelectorAll('input[name="teacher"]').forEach(i =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>i.checked = i.value === cS.teacher;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>});</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>Rnd(1,P1,A1);</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>const isSw=cS.a1==='Swimming';</p>
+<p class="p1"><span class="Apple-converted-space">        </span>W.classList.toggle('hidden',!isSw);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>Array.from(P2.querySelectorAll('input')).forEach(i=&gt;i.disabled=isSw);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>if(isSw){cS.a2=null;P2.querySelectorAll('input').forEach(i=&gt;i.checked=false);}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>Rnd(2,P2,A2);Cap();V();</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>function hC(e){</p>
+<p class="p1"><span class="Apple-converted-space">        </span>if(e.target===N1||e.target===N2)V();</p>
+<p class="p1"><span class="Apple-converted-space">        </span>else if(e.target.name==='teacher'){</p>
+<p class="p1"><span class="Apple-converted-space">            </span>cS.teacher=e.target.value;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>R(); // Re-render activities based on teacher pool</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}else if(e.target.name==='activity1'){</p>
+<p class="p1"><span class="Apple-converted-space">            </span>cS.a1=e.target.value;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>if(cS.a1==='Swimming')cS.a2=null;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>R();</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}else if(e.target.name==='activity2'){</p>
+<p class="p1"><span class="Apple-converted-space">            </span>cS.a2=e.target.value;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>R();</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><span class="Apple-converted-space">    </span></p>
+<p class="p1"><span class="Apple-converted-space">    </span>async function hS(e){</p>
+<p class="p1"><span class="Apple-converted-space">        </span>e.preventDefault();if(S.disabled)return;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>S.disabled=true;S.textContent='Saving...';M.classList.add('hidden');</p>
+<p class="p1"><span class="Apple-converted-space">        </span>try{</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const payload={</p>
+<p class="p1"><span class="Apple-converted-space">                </span>firstName:N1.value.trim(),lastName:N2.value.trim(),</p>
+<p class="p1"><span class="Apple-converted-space">                </span>teacher:cS.teacher,</p>
+<p class="p1"><span class="Apple-converted-space">                </span>activity1:cS.a1,activity2:cS.a1==='Swimming'?null:cS.a2,</p>
+<p class="p1"><span class="Apple-converted-space">                </span>timestamp:firebase.firestore.FieldValue.serverTimestamp()</p>
+<p class="p1"><span class="Apple-converted-space">            </span>};</p>
+<p class="p1"><span class="Apple-converted-space">            </span>await db.collection(`artifacts/${D}/public/data/activity_selections`).doc(uId).set(payload);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>iS={teacher:cS.teacher,a1:cS.a1,a2:cS.a2};msg('s','Selections saved!');</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}catch(err){msg('e','Error saving selections.');}finally{S.textContent='Submit Selections';S.disabled=false;V();}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>async function I(){</p>
+<p class="p1"><span class="Apple-converted-space">        </span>L.classList.remove('hidden');</p>
+<p class="p1"><span class="Apple-converted-space">        </span>try{</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const cfg=JSON.parse(typeof __firebase_config!=='undefined'?__firebase_config:'{}');</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const app=firebase.initializeApp(cfg);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>db=app.firestore();auth=app.auth();</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const t=typeof __initial_auth_token!=='undefined'?__initial_auth_token:null;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>if(t)await auth.signInWithCustomToken(t);else await auth.signInAnonymously();</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>auth.onAuthStateChanged(user=&gt;{</p>
+<p class="p1"><span class="Apple-converted-space">                </span>if(user){uId=user.uid;iR=true;lR();}else{uId=null;iR=false;}</p>
+<p class="p1"><span class="Apple-converted-space">                </span>R();</p>
+<p class="p1"><span class="Apple-converted-space">            </span>});</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}catch(e){L.classList.add('hidden');msg('e','App failed to load. Console error.');}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>function lR(){</p>
+<p class="p1"><span class="Apple-converted-space">        </span>if(!db||!uId)return;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>db.collection(`artifacts/${D}/public/data/activity_selections`).onSnapshot(s=&gt;{</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const sA={};let uD=null;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>s.forEach(doc=&gt;{</p>
+<p class="p1"><span class="Apple-converted-space">                </span>const data=doc.data();sA[doc.id]=data;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>if(doc.id===uId)uD=data;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>});</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>if(uD){</p>
+<p class="p1"><span class="Apple-converted-space">                </span>N1.value=uD.firstName||'';N2.value=uD.lastName||'';</p>
+<p class="p1"><span class="Apple-converted-space">                </span>iS={teacher:uD.teacher,a1:uD.activity1,a2:uD.activity2};</p>
+<p class="p1"><span class="Apple-converted-space">                </span>cS={n1:uD.firstName,n2:uD.lastName,teacher:uD.teacher,a1:uD.activity1,a2:uD.activity2};</p>
+<p class="p1"><span class="Apple-converted-space">                </span>msg('i',`Current: Teacher-${uD.teacher||'None'}, A1-${uD.activity1||'None'}, A2-${uD.activity2||'None'}.`);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}else{iS={teacher:null,a1:null,a2:null};}</p>
+<p class="p1"><span class="Apple-converted-space">            </span>Cnt(sA);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>},e=&gt;{msg('e','Real-time data failed to load.');});</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><span class="Apple-converted-space">    </span></p>
+<p class="p1"><span class="Apple-converted-space">    </span>window.onload=function(){F.addEventListener('change',hC);F.addEventListener('input',hC);F.addEventListener('submit',hS);I();};</p>
+<p class="p1">})();</p>
+<p class="p1">&lt;/script&gt;</p>
+</body>
+</html>
