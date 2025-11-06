@@ -1,282 +1,538 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="2575.7">
-  <style type="text/css">
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
-    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Activity Sign-Up</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom Styles */
+        .act-card {
+            transition: all 0.2s;
+            cursor: pointer;
+            border-radius: 0.5rem;
+        }
+        .full {
+            background-color: #fca5a5; /* Red-300 */
+            cursor: not-allowed;
+            opacity: 0.7;
+        }
+        /* Style for selected item */
+        .sel:checked + .act-card {
+            border-color: #4f46e5; /* Indigo-600 */
+            background-color: #eef2ff; /* Indigo-50 */
+            box-shadow: 0 0 0 2px #4f46e5;
+        }
+    </style>
 </head>
-<body>
-<p class="p1">&lt;script src="https://cdn.tailwindcss.com"&gt;&lt;/script&gt;</p>
-<p class="p1">&lt;style&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.act-card{transition:all .2s;cursor:pointer;border-radius:8px}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.full{background-color:#fca5a5;cursor:not-allowed;opacity:.7}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.sel:checked+.act-card{border-color:#4f46e5;background-color:#eef2ff;box-shadow:0 0 0 2px #4f46e5}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.max-w-4xl{max-width:100%}</p>
-<p class="p1">&lt;/style&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;div id="A" class="max-w-4xl mx-auto bg-white shadow-xl rounded-xl p-4"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;header class="text-center mb-6"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;h1 class="text-2xl font-bold text-indigo-700"&gt;Student Activity Sign-Up&lt;/h1&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;p class="text-gray-600 mt-1 text-sm"&gt;Select teacher, enter name, and choose two activities (unless Activity 1 is Swimming).&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/header&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div id="L" class="text-center p-4 text-indigo-500 font-semibold"&gt;&lt;svg class="animate-spin h-5 w-5 mr-3 inline-block" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"&gt;&lt;circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"&gt;&lt;/circle&gt;&lt;path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"&gt;&lt;/path&gt;&lt;/svg&gt;Loading data...&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div id="M" class="hidden p-3 mb-4 rounded-lg font-medium"&gt;&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;form id="F" class="space-y-6"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="grid grid-cols-1 md:grid-cols-2 gap-4"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;input type="text" id="N1" placeholder="First Name" required class="p-3 border rounded-lg focus:ring-indigo-500 focus:border-indigo-500"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;input type="text" id="N2" placeholder="Last Name" required class="p-3 border rounded-lg focus:ring-indigo-500 focus:border-indigo-500"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="mb-6 bg-yellow-50 p-3 rounded-lg border border-yellow-200"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;h3 class="text-xl font-semibold text-gray-800 mb-3"&gt;1. Social Studies Teacher:&lt;/h3&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;div id="T_Select" class="grid grid-cols-2 gap-4"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;label class="block"&gt;&lt;input type="radio" name="teacher" value="Bauman" class="hidden sel"&gt;&lt;div class="act-card border-2 p-3 shadow-sm text-center bg-white hover:border-indigo-400 border-gray-300"&gt;&lt;div class="font-bold text-gray-800"&gt;Bauman&lt;/div&gt;&lt;/div&gt;&lt;/label&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;label class="block"&gt;&lt;input type="radio" name="teacher" value="Pfeifer" class="hidden sel"&gt;&lt;div class="act-card border-2 p-3 shadow-sm text-center bg-white hover:border-indigo-400 border-gray-300"&gt;&lt;div class="font-bold text-gray-800"&gt;Pfeifer&lt;/div&gt;&lt;/div&gt;&lt;/label&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div id="E" class="bg-indigo-50 p-3 rounded-lg border border-indigo-200"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;h2 class="text-base font-semibold text-indigo-700 mb-2"&gt;Current Capacity (Standard: 35/Teacher; Swimming: 30/Shared)&lt;/h2&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;div id="C" class="grid grid-cols-2 gap-2 text-xs"&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;section&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;h3 class="text-xl font-semibold text-gray-800 mb-3"&gt;2. Activity 1:&lt;/h3&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;div id="P1" class="grid md:grid-cols-4 gap-4"&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/section&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;section id="S2"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;h3 class="text-xl font-semibold text-gray-800 mb-3"&gt;3. Activity 2:&lt;/h3&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;p id="W" class="text-sm font-medium text-red-600 mb-2 hidden"&gt;Activity 1 is Swimming, Activity 2 is disabled.&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;div id="P2" class="grid md:grid-cols-3 gap-4"&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/section&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="pt-4 border-t border-gray-200"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;button type="submit" id="S" class="w-full py-3 bg-indigo-600 text-white font-bold rounded-lg disabled:bg-indigo-300" disabled&gt;Select Activities&lt;/button&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/form&gt;</p>
-<p class="p1">&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;!-- V8 FIREBASE COMPAT LIBRARY IMPORTS --&gt;</p>
-<p class="p1">&lt;script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"&gt;&lt;/script&gt;</p>
-<p class="p1">&lt;script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"&gt;&lt;/script&gt;</p>
-<p class="p1">&lt;script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"&gt;&lt;/script&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;script&gt;</p>
-<p class="p1">(function() {</p>
-<p class="p1"><span class="Apple-converted-space">    </span>const K=35, SWIM_K=30, T_NAMES=['Bauman', 'Pfeifer']; // Standard limit 35 (per teacher), Swimming limit 30 (shared)</p>
-<p class="p1"><span class="Apple-converted-space">    </span>const A1=['Swimming','Board Games','Video Games','Gym'],A2=['Board Games','Video Games','Gym'];</p>
-<p class="p1"><span class="Apple-converted-space">    </span>const D=typeof __app_id!=='undefined'?__app_id:'a';</p>
-<p class="p1"><span class="Apple-converted-space">    </span>const L=document.getElementById('L'),M=document.getElementById('M'),S=document.getElementById('S'),F=document.getElementById('F'),P1=document.getElementById('P1'),P2=document.getElementById('P2'),N1=document.getElementById('N1'),N2=document.getElementById('N2'),C=document.getElementById('C'),W=document.getElementById('W');</p>
-<p class="p1"><span class="Apple-converted-space">    </span>let db,auth,uId=null,cS={n1:'',n2:'',teacher:null,a1:null,a2:null},cE={},iS={teacher:null,a1:null,a2:null},iR=false;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>function msg(t,e){M.textContent=e;M.className='p-3 mb-4 rounded-lg font-medium';M.classList.remove('hidden','bg-red-100','text-red-700','bg-green-100','text-green-700');M.classList.add(t!=='e'?'bg-green-100 text-green-700':'bg-red-100 text-red-700');}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>function Cnt(s){</p>
-<p class="p1"><span class="Apple-converted-space">        </span>cE = {};</p>
-<p class="p1"><span class="Apple-converted-space">        </span>// 1. Initialize teacher-specific counts (K=35)</p>
-<p class="p1"><span class="Apple-converted-space">        </span>T_NAMES.forEach(t =&gt; {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>A1.filter(a =&gt; a !== 'Swimming').forEach(a =&gt; { cE[`${a}_1_${t}`] = 0; });</p>
-<p class="p1"><span class="Apple-converted-space">            </span>A2.forEach(a =&gt; { cE[`${a}_2_${t}`] = 0; });</p>
-<p class="p1"><span class="Apple-converted-space">        </span>});</p>
-<p class="p1"><span class="Apple-converted-space">        </span>// 2. Initialize shared swimming count (SWIM_K=30)</p>
-<p class="p1"><span class="Apple-converted-space">        </span>cE['Swimming_1_Total'] = 0;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>for(const[id,sel]of Object.entries(s)){</p>
-<p class="p1"><span class="Apple-converted-space">            </span>if(!sel.teacher) continue;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>const t = sel.teacher;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">            </span>if(sel.activity1){</p>
-<p class="p1"><span class="Apple-converted-space">                </span>if(sel.activity1==='Swimming'){</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>cE['Swimming_1_Total']++; // Shared Pool</p>
-<p class="p1"><span class="Apple-converted-space">                </span>}else{</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>cE[`${sel.activity1}_1_${t}`] = (cE[`${sel.activity1}_1_${t}`] || 0) + 1; // Teacher Pool</p>
-<p class="p1"><span class="Apple-converted-space">                </span>}</p>
-<p class="p1"><span class="Apple-converted-space">            </span>}</p>
-<p class="p1"><span class="Apple-converted-space">            </span>if(sel.activity2 &amp;&amp; sel.activity1!=='Swimming'){</p>
-<p class="p1"><span class="Apple-converted-space">                </span>cE[`${sel.activity2}_2_${t}`] = (cE[`${sel.activity2}_2_${t}`] || 0) + 1; // Teacher Pool</p>
-<p class="p1"><span class="Apple-converted-space">            </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>R();</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>function Rnd(p,o,aL){</p>
-<p class="p1"><span class="Apple-converted-space">        </span>o.innerHTML='';</p>
-<p class="p1"><span class="Apple-converted-space">        </span>const selectedTeacher = cS.teacher;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>aL.forEach(act=&gt;{</p>
-<p class="p1"><span class="Apple-converted-space">            </span>let cnt=0, limit, full=false, desc;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>const isShared = act === 'Swimming';</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">            </span>if(isShared){</p>
-<p class="p1"><span class="Apple-converted-space">                </span>limit=SWIM_K;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>cnt=cE['Swimming_1_Total']||0;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>full=cnt&gt;=limit;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>} else if(selectedTeacher){</p>
-<p class="p1"><span class="Apple-converted-space">                </span>limit=K;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>const k=`${act}_${p}_${selectedTeacher}`;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>cnt=cE[k]||0;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>full=cnt&gt;=limit;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>} else {</p>
-<p class="p1"><span class="Apple-converted-space">                </span>limit=K;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>cnt=0;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">            </span>const rem=limit-cnt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>const ch=cS[`a${p}`]===act;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>const dis=(full || (!isShared &amp;&amp; !selectedTeacher &amp;&amp; p &gt; 0))?'disabled':'';</p>
-<p class="p1"><span class="Apple-converted-space">            </span>const cl=full?'full':'bg-white hover:border-indigo-400 border-gray-300';</p>
-<p class="p2"><span class="Apple-converted-space">            </span></p>
-<p class="p1"><span class="Apple-converted-space">            </span>if(!selectedTeacher &amp;&amp; !isShared) {</p>
-<p class="p1"><span class="Apple-converted-space">                 </span>desc = 'Select Teacher First';</p>
-<p class="p1"><span class="Apple-converted-space">            </span>} else {</p>
-<p class="p1"><span class="Apple-converted-space">                 </span>desc = full?'FULL':`Avail: ${Math.max(0,rem)}`;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">            </span>o.innerHTML+=`&lt;label class="block"&gt;&lt;input type="radio" name="activity${p}" value="${act}" class="hidden sel" ${ch?'checked':''} ${dis}&gt;&lt;div class="act-card border-2 p-3 shadow-sm text-center ${cl}"&gt;&lt;div class="font-bold text-gray-800"&gt;${act}&lt;/div&gt;&lt;p class="text-xs ${full?'text-red-800':'text-indigo-600'} mt-1 font-semibold"&gt;${desc}&lt;/p&gt;&lt;/div&gt;&lt;/label&gt;`;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>});</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>function Cap(){</p>
-<p class="p1"><span class="Apple-converted-space">        </span>C.innerHTML='';</p>
-<p class="p1"><span class="Apple-converted-space">        </span>const allStats=[];</p>
-<p class="p1"><span class="Apple-converted-space">        </span>// Shared Swimming</p>
-<p class="p1"><span class="Apple-converted-space">        </span>allStats.push(['Swimming (A1)', 'Shared', cE['Swimming_1_Total']||0, SWIM_K]);</p>
-<p class="p2"><span class="Apple-converted-space">        </span></p>
-<p class="p1"><span class="Apple-converted-space">        </span>// Teacher Specific</p>
-<p class="p1"><span class="Apple-converted-space">        </span>T_NAMES.forEach(t =&gt; {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>A1.filter(a =&gt; a !== 'Swimming').forEach(a =&gt; {</p>
-<p class="p1"><span class="Apple-converted-space">                </span>allStats.push([a+' (A1)', t, cE[`${a}_1_${t}`]||0, K]);</p>
-<p class="p1"><span class="Apple-converted-space">            </span>});</p>
-<p class="p1"><span class="Apple-converted-space">            </span>A2.forEach(a =&gt; {</p>
-<p class="p1"><span class="Apple-converted-space">                </span>allStats.push([a+' (A2)', t, cE[`${a}_2_${t}`]||0, K]);</p>
-<p class="p1"><span class="Apple-converted-space">            </span>});</p>
-<p class="p1"><span class="Apple-converted-space">        </span>});</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>allStats.sort((a,b)=&gt;a[1].localeCompare(b[1]) || a[0].localeCompare(b[0])).forEach(([act, t, cnt, limit])=&gt;{</p>
-<p class="p1"><span class="Apple-converted-space">            </span>const curr=(cS.a1===act.split(' ')[0] &amp;&amp; act.endsWith('(A1)') &amp;&amp; (t==='Shared' || t===cS.teacher)) ||<span class="Apple-converted-space"> </span></p>
-<p class="p1"><span class="Apple-converted-space">                       </span>(cS.a2===act.split(' ')[0] &amp;&amp; act.endsWith('(A2)') &amp;&amp; t===cS.teacher);</p>
-<p class="p1"><span class="Apple-converted-space">            </span>let badge=cnt&gt;=limit?'bg-red-100 text-red-700 font-bold':(cnt&gt;=limit-5?'bg-yellow-100 text-yellow-700':(curr?'bg-indigo-100 text-indigo-700 font-bold':'bg-gray-200 text-gray-800'));</p>
-<p class="p1"><span class="Apple-converted-space">            </span>C.innerHTML+=`&lt;div class="flex justify-between items-center py-1 px-2 rounded-md ${badge}"&gt;&lt;span class="font-medium"&gt;${act} (${t})&lt;/span&gt;&lt;span class="font-bold"&gt;${cnt}/${limit}&lt;/span&gt;&lt;/div&gt;`;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>});</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>function V(){</p>
-<p class="p1"><span class="Apple-converted-space">        </span>let ok=N1.value.trim()&amp;&amp;N2.value.trim()&amp;&amp;cS.teacher&amp;&amp;cS.a1,err='';</p>
-<p class="p1"><span class="Apple-converted-space">        </span>if(!cS.teacher){err='Select teacher first.';}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>else if(!N1.value.trim()||!N2.value.trim()){err='Enter name.';}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>else if(!cS.a1){err='Select Activity 1.';}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>else if(cS.a1!=='Swimming'&amp;&amp;!cS.a2){err='Select Activity 2.';}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>if(ok){</p>
-<p class="p1"><span class="Apple-converted-space">            </span>// Check Activity 1 capacity</p>
-<p class="p1"><span class="Apple-converted-space">            </span>const k1_key = cS.a1 === 'Swimming' ? 'Swimming_1_Total' : `${cS.a1}_1_${cS.teacher}`;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>const limit1 = cS.a1 === 'Swimming' ? SWIM_K : K;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>if(cS.a1!==iS.a1 &amp;&amp; (cE[k1_key]||0) &gt;= limit1){ok=false;err=`Activity 1 (${cS.a1}) full.`;}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">            </span>// Check Activity 2 capacity (only if not swimming)</p>
-<p class="p1"><span class="Apple-converted-space">            </span>if(ok &amp;&amp; cS.a1!=='Swimming' &amp;&amp; cS.a2){</p>
-<p class="p1"><span class="Apple-converted-space">                </span>const k2_key = `${cS.a2}_2_${cS.teacher}`;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>if(cS.a2!==iS.a2 &amp;&amp; (cE[k2_key]||0) &gt;= K){ok=false;err=`Activity 2 (${cS.a2}) full.`;}</p>
-<p class="p1"><span class="Apple-converted-space">            </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>S.disabled=!ok;S.textContent=ok?'Submit Selections':err||'Submit Selections';</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>function R(){</p>
-<p class="p1"><span class="Apple-converted-space">        </span>if(!iR){L.classList.remove('hidden');return;}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>L.classList.add('hidden');</p>
-<p class="p2"><span class="Apple-converted-space">        </span></p>
-<p class="p1"><span class="Apple-converted-space">        </span>// Handle teacher radio button persistence</p>
-<p class="p1"><span class="Apple-converted-space">        </span>document.querySelectorAll('input[name="teacher"]').forEach(i =&gt; {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>i.checked = i.value === cS.teacher;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>});</p>
-<p class="p2"><span class="Apple-converted-space">        </span></p>
-<p class="p1"><span class="Apple-converted-space">        </span>Rnd(1,P1,A1);</p>
-<p class="p2"><span class="Apple-converted-space">        </span></p>
-<p class="p1"><span class="Apple-converted-space">        </span>const isSw=cS.a1==='Swimming';</p>
-<p class="p1"><span class="Apple-converted-space">        </span>W.classList.toggle('hidden',!isSw);</p>
-<p class="p1"><span class="Apple-converted-space">        </span>Array.from(P2.querySelectorAll('input')).forEach(i=&gt;i.disabled=isSw);</p>
-<p class="p1"><span class="Apple-converted-space">        </span>if(isSw){cS.a2=null;P2.querySelectorAll('input').forEach(i=&gt;i.checked=false);}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>Rnd(2,P2,A2);Cap();V();</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>function hC(e){</p>
-<p class="p1"><span class="Apple-converted-space">        </span>if(e.target===N1||e.target===N2)V();</p>
-<p class="p1"><span class="Apple-converted-space">        </span>else if(e.target.name==='teacher'){</p>
-<p class="p1"><span class="Apple-converted-space">            </span>cS.teacher=e.target.value;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>R(); // Re-render activities based on teacher pool</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}else if(e.target.name==='activity1'){</p>
-<p class="p1"><span class="Apple-converted-space">            </span>cS.a1=e.target.value;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>if(cS.a1==='Swimming')cS.a2=null;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>R();</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}else if(e.target.name==='activity2'){</p>
-<p class="p1"><span class="Apple-converted-space">            </span>cS.a2=e.target.value;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>R();</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><span class="Apple-converted-space">    </span></p>
-<p class="p1"><span class="Apple-converted-space">    </span>async function hS(e){</p>
-<p class="p1"><span class="Apple-converted-space">        </span>e.preventDefault();if(S.disabled)return;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>S.disabled=true;S.textContent='Saving...';M.classList.add('hidden');</p>
-<p class="p1"><span class="Apple-converted-space">        </span>try{</p>
-<p class="p1"><span class="Apple-converted-space">            </span>const payload={</p>
-<p class="p1"><span class="Apple-converted-space">                </span>firstName:N1.value.trim(),lastName:N2.value.trim(),</p>
-<p class="p1"><span class="Apple-converted-space">                </span>teacher:cS.teacher,</p>
-<p class="p1"><span class="Apple-converted-space">                </span>activity1:cS.a1,activity2:cS.a1==='Swimming'?null:cS.a2,</p>
-<p class="p1"><span class="Apple-converted-space">                </span>timestamp:firebase.firestore.FieldValue.serverTimestamp()</p>
-<p class="p1"><span class="Apple-converted-space">            </span>};</p>
-<p class="p1"><span class="Apple-converted-space">            </span>await db.collection(`artifacts/${D}/public/data/activity_selections`).doc(uId).set(payload);</p>
-<p class="p1"><span class="Apple-converted-space">            </span>iS={teacher:cS.teacher,a1:cS.a1,a2:cS.a2};msg('s','Selections saved!');</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}catch(err){msg('e','Error saving selections.');}finally{S.textContent='Submit Selections';S.disabled=false;V();}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>async function I(){</p>
-<p class="p1"><span class="Apple-converted-space">        </span>L.classList.remove('hidden');</p>
-<p class="p1"><span class="Apple-converted-space">        </span>try{</p>
-<p class="p1"><span class="Apple-converted-space">            </span>const cfg=JSON.parse(typeof __firebase_config!=='undefined'?__firebase_config:'{}');</p>
-<p class="p1"><span class="Apple-converted-space">            </span>const app=firebase.initializeApp(cfg);</p>
-<p class="p1"><span class="Apple-converted-space">            </span>db=app.firestore();auth=app.auth();</p>
-<p class="p1"><span class="Apple-converted-space">            </span>const t=typeof __initial_auth_token!=='undefined'?__initial_auth_token:null;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>if(t)await auth.signInWithCustomToken(t);else await auth.signInAnonymously();</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">            </span>auth.onAuthStateChanged(user=&gt;{</p>
-<p class="p1"><span class="Apple-converted-space">                </span>if(user){uId=user.uid;iR=true;lR();}else{uId=null;iR=false;}</p>
-<p class="p1"><span class="Apple-converted-space">                </span>R();</p>
-<p class="p1"><span class="Apple-converted-space">            </span>});</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}catch(e){L.classList.add('hidden');msg('e','App failed to load. Console error.');}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>function lR(){</p>
-<p class="p1"><span class="Apple-converted-space">        </span>if(!db||!uId)return;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>db.collection(`artifacts/${D}/public/data/activity_selections`).onSnapshot(s=&gt;{</p>
-<p class="p1"><span class="Apple-converted-space">            </span>const sA={};let uD=null;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>s.forEach(doc=&gt;{</p>
-<p class="p1"><span class="Apple-converted-space">                </span>const data=doc.data();sA[doc.id]=data;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>if(doc.id===uId)uD=data;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>});</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">            </span>if(uD){</p>
-<p class="p1"><span class="Apple-converted-space">                </span>N1.value=uD.firstName||'';N2.value=uD.lastName||'';</p>
-<p class="p1"><span class="Apple-converted-space">                </span>iS={teacher:uD.teacher,a1:uD.activity1,a2:uD.activity2};</p>
-<p class="p1"><span class="Apple-converted-space">                </span>cS={n1:uD.firstName,n2:uD.lastName,teacher:uD.teacher,a1:uD.activity1,a2:uD.activity2};</p>
-<p class="p1"><span class="Apple-converted-space">                </span>msg('i',`Current: Teacher-${uD.teacher||'None'}, A1-${uD.activity1||'None'}, A2-${uD.activity2||'None'}.`);</p>
-<p class="p1"><span class="Apple-converted-space">            </span>}else{iS={teacher:null,a1:null,a2:null};}</p>
-<p class="p1"><span class="Apple-converted-space">            </span>Cnt(sA);</p>
-<p class="p1"><span class="Apple-converted-space">        </span>},e=&gt;{msg('e','Real-time data failed to load.');});</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><span class="Apple-converted-space">    </span></p>
-<p class="p1"><span class="Apple-converted-space">    </span>window.onload=function(){F.addEventListener('change',hC);F.addEventListener('input',hC);F.addEventListener('submit',hS);I();};</p>
-<p class="p1">})();</p>
-<p class="p1">&lt;/script&gt;</p>
+<body class="bg-gray-50 p-4 sm:p-8 min-h-screen font-sans">
+
+    <!-- Main Container -->
+    <div id="A" class="max-w-4xl mx-auto bg-white shadow-2xl rounded-xl p-6 sm:p-8 mt-4">
+        
+        <header class="text-center mb-8">
+            <h1 class="text-3xl font-extrabold text-indigo-700">Student Activity Sign-Up</h1>
+            <p class="text-gray-600 mt-2 text-md">Select your teacher, enter your name, and choose up to two activities.</p>
+        </header>
+
+        <!-- Loading Indicator -->
+        <div id="L" class="text-center p-6 text-indigo-500 font-semibold">
+            <svg class="animate-spin h-5 w-5 mr-3 inline-block" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+            </svg>
+            Loading application and capacity data...
+        </div>
+
+        <!-- Message Box (Success/Error/Info) -->
+        <div id="M" class="hidden p-3 mb-4 rounded-lg font-medium"></div>
+
+        <!-- Registration Form -->
+        <form id="F" class="space-y-6">
+            
+            <!-- Name Inputs -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <input type="text" id="N1" placeholder="First Name" required class="p-3 border border-gray-300 rounded-lg focus:ring-indigo-500 focus:border-indigo-500 transition duration-150">
+                <input type="text" id="N2" placeholder="Last Name" required class="p-3 border border-gray-300 rounded-lg focus:ring-indigo-500 focus:border-indigo-500 transition duration-150">
+            </div>
+
+            <!-- Teacher Selection -->
+            <div class="bg-yellow-50 p-4 rounded-xl border border-yellow-300 shadow-inner">
+                <h3 class="text-xl font-bold text-gray-800 mb-3">1. Social Studies Teacher:</h3>
+                <div id="T_Select" class="grid grid-cols-2 gap-4">
+                    <!-- Bauman -->
+                    <label class="block">
+                        <input type="radio" name="teacher" value="Bauman" class="hidden sel">
+                        <div class="act-card border-2 p-3 shadow-sm text-center bg-white hover:border-indigo-400 border-gray-300">
+                            <div class="font-bold text-gray-800">Bauman</div>
+                        </div>
+                    </label>
+                    <!-- Pfeifer -->
+                    <label class="block">
+                        <input type="radio" name="teacher" value="Pfeifer" class="hidden sel">
+                        <div class="act-card border-2 p-3 shadow-sm text-center bg-white hover:border-indigo-400 border-gray-300">
+                            <div class="font-bold text-gray-800">Pfeifer</div>
+                        </div>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Current Capacity -->
+            <div id="E" class="bg-indigo-50 p-4 rounded-xl border border-indigo-300 shadow-inner">
+                <h2 class="text-base font-bold text-indigo-700 mb-3">Current Capacity Overview</h2>
+                <p class="text-xs text-indigo-500 mb-2">Standard limit: 35 per Teacher | Swimming limit: 30 shared total</p>
+                <div id="C" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2 text-xs">
+                    <!-- Capacity details rendered here -->
+                </div>
+            </div>
+
+            <!-- Activity 1 Selection -->
+            <section>
+                <h3 class="text-xl font-bold text-gray-800 mb-3">2. Activity 1 (Mandatory):</h3>
+                <div id="P1" class="grid md:grid-cols-4 gap-4">
+                    <!-- Activity 1 Options rendered here -->
+                </div>
+            </section>
+
+            <!-- Activity 2 Selection -->
+            <section id="S2">
+                <h3 class="text-xl font-bold text-gray-800 mb-3">3. Activity 2:</h3>
+                <p id="W" class="text-sm font-bold text-red-600 mb-2 hidden p-2 bg-red-50 border border-red-200 rounded-lg">
+                    Activity 1 is Swimming. Activity 2 is automatically skipped/disabled.
+                </p>
+                <div id="P2" class="grid md:grid-cols-3 gap-4">
+                    <!-- Activity 2 Options rendered here -->
+                </div>
+            </section>
+
+            <!-- Submit Button -->
+            <div class="pt-6 border-t border-gray-200">
+                <button type="submit" id="S" class="w-full py-3 bg-indigo-600 text-white font-extrabold text-lg rounded-lg shadow-lg hover:bg-indigo-700 transition duration-150 disabled:bg-gray-400 disabled:shadow-none" disabled>
+                    Submit Selections
+                </button>
+            </div>
+            
+        </form>
+    </div>
+
+    <!-- Firebase v9 Module Imports (The modern way!) -->
+    <script type="module">
+        import * as firebaseApp from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+        import * as firebaseAuth from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
+        import * as firebaseFirestore from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
+
+        // Destructure necessary functions from the imported modules
+        const { initializeApp } = firebaseApp;
+        const { getAuth, signInAnonymously, signInWithCustomToken, onAuthStateChanged } = firebaseAuth;
+        const { getFirestore, collection, doc, setDoc, onSnapshot, serverTimestamp } = firebaseFirestore;
+        
+        // Console logging for debugging Firebase
+        // firebaseFirestore.setLogLevel('debug');
+        
+        // --- CONSTANTS ---
+        const K = 35; // Standard limit 35 (per teacher)
+        const SWIM_K = 30; // Swimming limit 30 (shared)
+        const T_NAMES = ['Bauman', 'Pfeifer'];
+        const A1 = ['Swimming', 'Board Games', 'Video Games', 'Gym'];
+        const A2 = ['Board Games', 'Video Games', 'Gym'];
+        
+        // Global variables provided by the environment
+        const D = typeof __app_id !== 'undefined' ? __app_id : 'default-app-id';
+
+        // DOM Elements
+        const L = document.getElementById('L'), M = document.getElementById('M'), S = document.getElementById('S'), F = document.getElementById('F'), 
+              P1 = document.getElementById('P1'), P2 = document.getElementById('P2'), 
+              N1 = document.getElementById('N1'), N2 = document.getElementById('N2'), 
+              C = document.getElementById('C'), W = document.getElementById('W');
+        
+        // State Management
+        let db, auth;
+        let uId = null; 
+        // Current Selection (cS) - what the user has selected in the form
+        let cS = { n1: '', n2: '', teacher: null, a1: null, a2: null }; 
+        // Current Enrollment (cE) - capacity counts from Firestore
+        let cE = {}; 
+        // Initial Selection (iS) - what the user previously saved (used for validation logic)
+        let iS = { teacher: null, a1: null, a2: null }; 
+        let isAuthReady = false;
+
+        // --- UTILITY FUNCTIONS ---
+
+        function msg(type, text) {
+            M.textContent = text;
+            M.classList.remove('hidden', 'bg-red-100', 'text-red-700', 'bg-green-100', 'text-green-700');
+            if (type === 's' || type === 'i') {
+                // Success or Info
+                M.classList.add('bg-green-100', 'text-green-700');
+            } else {
+                // Error
+                M.classList.add('bg-red-100', 'text-red-700');
+            }
+        }
+
+        // Calculates the current enrollment counts (cE) from the raw snapshot data (s)
+        function calculateCounts(snapshotData) {
+            cE = {};
+            
+            // 1. Initialize all teacher-specific counts (K=35)
+            T_NAMES.forEach(t => {
+                A1.filter(a => a !== 'Swimming').forEach(a => { cE[`${a}_1_${t}`] = 0; });
+                A2.forEach(a => { cE[`${a}_2_${t}`] = 0; });
+            });
+            // 2. Initialize shared swimming count (SWIM_K=30)
+            cE['Swimming_1_Total'] = 0;
+
+            for (const [id, selection] of Object.entries(snapshotData)) {
+                if (!selection.teacher) continue;
+                const t = selection.teacher;
+
+                // Count Activity 1
+                if (selection.activity1) {
+                    if (selection.activity1 === 'Swimming') {
+                        cE['Swimming_1_Total']++; // Shared Pool
+                    } else {
+                        // Teacher Pool for non-swimming A1
+                        cE[`${selection.activity1}_1_${t}`] = (cE[`${selection.activity1}_1_${t}`] || 0) + 1;
+                    }
+                }
+                
+                // Count Activity 2 (only if A1 is not Swimming)
+                if (selection.activity2 && selection.activity1 !== 'Swimming') {
+                    // Teacher Pool for A2
+                    cE[`${selection.activity2}_2_${t}`] = (cE[`${selection.activity2}_2_${t}`] || 0) + 1;
+                }
+            }
+            renderUI();
+        }
+
+        // Renders activity selection cards (p=1 for A1, p=2 for A2)
+        function renderActivityCards(p, outputElement, activityList) {
+            outputElement.innerHTML = '';
+            const selectedTeacher = cS.teacher;
+
+            activityList.forEach(act => {
+                let cnt = 0, limit, full = false, desc;
+                const isShared = act === 'Swimming';
+
+                // Determine capacity and status
+                if (isShared) {
+                    limit = SWIM_K;
+                    cnt = cE['Swimming_1_Total'] || 0;
+                    full = cnt >= limit;
+                } else if (selectedTeacher) {
+                    limit = K;
+                    const key = `${act}_${p}_${selectedTeacher}`;
+                    cnt = cE[key] || 0;
+                    full = cnt >= limit;
+                } else {
+                    limit = K;
+                    cnt = 0;
+                }
+
+                const rem = limit - cnt;
+                const isChecked = cS[`a${p}`] === act;
+                
+                // Disable if full, or if no teacher is selected (and not shared activity)
+                const isDisabled = (full || (!isShared && !selectedTeacher)) ? 'disabled' : '';
+                const cardClass = full ? 'full' : 'bg-white hover:border-indigo-400 border-gray-300';
+
+                if (!selectedTeacher && !isShared) {
+                    desc = 'Select Teacher First';
+                } else {
+                    desc = full ? 'FULL' : `Available: ${Math.max(0, rem)}`;
+                }
+
+                outputElement.innerHTML += `
+                    <label class="block">
+                        <input type="radio" name="activity${p}" value="${act}" class="hidden sel" ${isChecked ? 'checked' : ''} ${isDisabled}>
+                        <div class="act-card border-2 p-4 shadow-sm text-center ${cardClass}">
+                            <div class="font-bold text-gray-800 text-lg">${act}</div>
+                            <p class="text-sm ${full ? 'text-red-800' : 'text-indigo-600'} mt-1 font-semibold">${desc}</p>
+                        </div>
+                    </label>
+                `;
+            });
+        }
+
+        // Renders the capacity table
+        function renderCapacityTable() {
+            C.innerHTML = '';
+            const allStats = [];
+
+            // Shared Swimming
+            allStats.push(['Swimming (A1)', 'Shared', cE['Swimming_1_Total'] || 0, SWIM_K]);
+            
+            // Teacher Specific
+            T_NAMES.forEach(t => {
+                // Activity 1 (non-Swimming)
+                A1.filter(a => a !== 'Swimming').forEach(a => {
+                    allStats.push([a + ' (A1)', t, cE[`${a}_1_${t}`] || 0, K]);
+                });
+                // Activity 2
+                A2.forEach(a => {
+                    allStats.push([a + ' (A2)', t, cE[`${a}_2_${t}`] || 0, K]);
+                });
+            });
+
+            allStats.sort((a, b) => a[1].localeCompare(b[1]) || a[0].localeCompare(b[0])).forEach(([act, t, cnt, limit]) => {
+                const actName = act.split(' ')[0];
+                const isA1 = act.endsWith('(A1)');
+                
+                // Check if this is the currently selected activity for A1 or A2
+                const isCurrentSelection = (isA1 && cS.a1 === actName && (t === 'Shared' || t === cS.teacher)) || 
+                                           (!isA1 && cS.a2 === actName && t === cS.teacher);
+
+                let badgeClass;
+                if (cnt >= limit) {
+                    badgeClass = 'bg-red-200 text-red-800 font-bold';
+                } else if (cnt >= limit - 5) {
+                    badgeClass = 'bg-yellow-200 text-yellow-800';
+                } else if (isCurrentSelection) {
+                    badgeClass = 'bg-indigo-200 text-indigo-800 font-bold';
+                } else {
+                    badgeClass = 'bg-gray-100 text-gray-700';
+                }
+
+                C.innerHTML += `<div class="flex justify-between items-center py-1.5 px-3 rounded-md ${badgeClass}">
+                    <span class="font-medium">${act} (${t})</span>
+                    <span class="font-bold">${cnt}/${limit}</span>
+                </div>`;
+            });
+        }
+
+        // Validates the form and updates the submit button state
+        function validateForm() {
+            let isValid = N1.value.trim() && N2.value.trim() && cS.teacher && cS.a1;
+            let errorMessage = '';
+
+            if (!cS.teacher) { errorMessage = 'Select teacher first.'; }
+            else if (!N1.value.trim() || !N2.value.trim()) { errorMessage = 'Enter your first and last name.'; }
+            else if (!cS.a1) { errorMessage = 'Select Activity 1.'; }
+            else if (cS.a1 !== 'Swimming' && !cS.a2) { errorMessage = 'Select Activity 2.'; }
+            
+            // Re-check capacity if we pass basic validation
+            if (isValid && !errorMessage) {
+                // 1. Check Activity 1 capacity
+                const k1_key = cS.a1 === 'Swimming' ? 'Swimming_1_Total' : `${cS.a1}_1_${cS.teacher}`;
+                const limit1 = cS.a1 === 'Swimming' ? SWIM_K : K;
+                
+                // Only validate capacity if the selection is NEW or CHANGED
+                const isA1Change = cS.a1 !== iS.a1 || cS.teacher !== iS.teacher;
+                if (isA1Change && (cE[k1_key] || 0) >= limit1) {
+                    isValid = false;
+                    errorMessage = `Activity 1 (${cS.a1}) is full.`;
+                }
+
+                // 2. Check Activity 2 capacity (only if not swimming)
+                if (isValid && cS.a1 !== 'Swimming' && cS.a2) {
+                    const k2_key = `${cS.a2}_2_${cS.teacher}`;
+                    const isA2Change = cS.a2 !== iS.a2 || cS.teacher !== iS.teacher;
+                    if (isA2Change && (cE[k2_key] || 0) >= K) {
+                        isValid = false;
+                        errorMessage = `Activity 2 (${cS.a2}) is full.`;
+                    }
+                }
+            }
+
+            S.disabled = !isValid;
+            S.textContent = isValid ? 'Submit Selections' : (errorMessage || 'Submit Selections');
+        }
+
+        // Main rendering function (called after any state change or data update)
+        function renderUI() {
+            if (!isAuthReady) {
+                L.classList.remove('hidden');
+                return;
+            }
+            L.classList.add('hidden');
+            
+            // Re-check Teacher radio buttons for persistence
+            document.querySelectorAll('input[name="teacher"]').forEach(i => {
+                i.checked = i.value === cS.teacher;
+            });
+            
+            // Render Activities 1 and 2
+            renderActivityCards(1, P1, A1);
+            
+            const isSwimming = cS.a1 === 'Swimming';
+            W.classList.toggle('hidden', !isSwimming);
+
+            // If Activity 1 is Swimming, disable A2 and clear its selection
+            if (isSwimming) {
+                cS.a2 = null;
+                // Temporarily disable the activity 2 container visually
+                P2.innerHTML = `<p class="text-gray-500 italic p-3 col-span-full">Activity 2 is disabled when Activity 1 is Swimming.</p>`;
+            } else {
+                renderActivityCards(2, P2, A2);
+            }
+            
+            renderCapacityTable();
+            validateForm();
+        }
+
+        // --- EVENT HANDLERS ---
+        
+        // Form Change/Input Handler
+        function handleControlChange(e) {
+            if (e.target === N1) cS.n1 = e.target.value.trim();
+            else if (e.target === N2) cS.n2 = e.target.value.trim();
+            
+            else if (e.target.name === 'teacher') {
+                cS.teacher = e.target.value;
+                // Selecting a teacher re-validates all activity pools
+            } else if (e.target.name === 'activity1') {
+                cS.a1 = e.target.value;
+                if (cS.a1 === 'Swimming') {
+                    cS.a2 = null; // Clear A2 if A1 is Swimming
+                }
+            } else if (e.target.name === 'activity2') {
+                cS.a2 = e.target.value;
+            }
+            
+            renderUI();
+        }
+
+        // Form Submission Handler
+        async function handleSubmit(e) {
+            e.preventDefault();
+            if (S.disabled) return;
+            
+            S.disabled = true;
+            S.textContent = 'Saving...';
+            M.classList.add('hidden');
+
+            try {
+                // Payload for Firestore
+                const payload = {
+                    firstName: N1.value.trim(),
+                    lastName: N2.value.trim(),
+                    teacher: cS.teacher,
+                    activity1: cS.a1,
+                    // If A1 is Swimming, A2 is null
+                    activity2: cS.a1 === 'Swimming' ? null : cS.a2,
+                    timestamp: serverTimestamp() // Use modular serverTimestamp
+                };
+
+                // Use setDoc to save the selection
+                const docRef = doc(db, `artifacts/${D}/public/data/activity_selections`, uId);
+                await setDoc(docRef, payload);
+
+                // Update initial state upon successful save
+                iS = { teacher: cS.teacher, a1: cS.a1, a2: cS.a2 };
+                msg('s', `Success! Saved ${payload.activity1} and ${payload.activity2 || 'none'}.`);
+
+            } catch (err) {
+                console.error("Save Error:", err);
+                msg('e', 'Error saving selections. Check console for details.');
+            } finally {
+                S.textContent = 'Submit Selections';
+                S.disabled = false;
+                validateForm();
+            }
+        }
+
+        // Live Data Listener Setup
+        function setupLiveListener() {
+            if (!db || !uId) return;
+
+            // Create a query for the public collection
+            const q = collection(db, `artifacts/${D}/public/data/activity_selections`);
+            
+            // Set up real-time listener
+            onSnapshot(q, snapshot => {
+                const selectionsAll = {};
+                let currentUserData = null;
+
+                snapshot.forEach(doc => {
+                    const data = doc.data();
+                    selectionsAll[doc.id] = data;
+                    if (doc.id === uId) {
+                        currentUserData = data;
+                    }
+                });
+
+                // Load user's previous selection into the form state
+                if (currentUserData) {
+                    N1.value = currentUserData.firstName || '';
+                    N2.value = currentUserData.lastName || '';
+                    
+                    // Set current and initial state based on retrieved data
+                    cS = { 
+                        n1: currentUserData.firstName, 
+                        n2: currentUserData.lastName, 
+                        teacher: currentUserData.teacher, 
+                        a1: currentUserData.activity1, 
+                        a2: currentUserData.activity2 
+                    };
+                    iS = { 
+                        teacher: currentUserData.teacher, 
+                        a1: currentUserData.activity1, 
+                        a2: currentUserData.activity2 
+                    };
+                    msg('i', `Current Selections: Teacher: ${cS.teacher || 'None'}, Activity 1: ${cS.a1 || 'None'}, Activity 2: ${cS.a2 || 'None'}.`);
+                } else {
+                    iS = { teacher: null, a1: null, a2: null };
+                }
+                
+                // Recalculate counts and render UI
+                calculateCounts(selectionsAll);
+            }, e => {
+                console.error("Firestore Snapshot Error:", e);
+                msg('e', 'Real-time data failed to load. Please refresh.');
+            });
+        }
+
+        // --- INITIALIZATION ---
+        
+        async function initApp() {
+            L.classList.remove('hidden');
+
+            try {
+                // 1. Initialize Firebase
+                const cfg = JSON.parse(typeof __firebase_config !== 'undefined' ? __firebase_config : '{}');
+                const app = initializeApp(cfg);
+                db = getFirestore(app);
+                auth = getAuth(app);
+
+                // 2. Authentication
+                const token = typeof __initial_auth_token !== 'undefined' ? __initial_auth_token : null;
+                
+                // Sign in with token or anonymously
+                if (token) {
+                    await signInWithCustomToken(auth, token);
+                } else {
+                    await signInAnonymously(auth);
+                }
+
+                // 3. Set Auth State Listener
+                onAuthStateChanged(auth, user => {
+                    if (user) {
+                        uId = user.uid;
+                        isAuthReady = true;
+                        setupLiveListener(); // Start listening for data
+                    } else {
+                        uId = null;
+                        isAuthReady = false;
+                        msg('e', 'Authentication failed. Please check your user ID.');
+                    }
+                    renderUI();
+                });
+            } catch (e) {
+                L.classList.add('hidden');
+                console.error("App Initialization Error:", e);
+                msg('e', 'App failed to load. Check console for init error.');
+            }
+        }
+
+        // Attach event listeners and start initialization on load
+        window.onload = function() {
+            F.addEventListener('change', handleControlChange);
+            F.addEventListener('input', handleControlChange);
+            F.addEventListener('submit', handleSubmit);
+            initApp();
+        };
+
+    </script>
 </body>
 </html>
